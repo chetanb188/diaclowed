@@ -258,15 +258,15 @@
 
     <div class="nav-item active" data-page="dashboard" onclick="window.__nav('dashboard')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
-      <span class="gj">ડેશબોર્ડ</span>
+      <span class="gj">Dashboard</span>
     </div>
     <div class="nav-item" data-page="newKapan" onclick="window.__nav('newKapan')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-      <span class="gj">નવું કાપણ</span>
+      <span class="gj">New Kapan</span>
     </div>
     <div class="nav-item" data-page="list" onclick="window.__nav('list')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-      <span class="gj">બધા કાપણ</span>
+      <span class="gj">All Kapan</span>
       <span class="badge" id="navListCount">0</span>
     </div>
 
@@ -286,12 +286,12 @@
       <div class="page-head">
         <div>
           <div class="page-eyebrow">Overview</div>
-          <h1 class="page-title gj">ડેશબોર્ડ</h1>
-          <div class="page-desc">તમારા તમામ કાપણ અને પોલિશ કટ નું ઝડપી નજારો</div>
+          <h1 class="page-title gj">Deshboard</h1>
+          <div class="page-desc">View of All Kapan</div>
         </div>
         <button class="btn btn-gold" onclick="window.__nav('newKapan')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          <span class="gj">નવું કાપણ ઉમેરો</span>
+          <span class="gj">Add New Kapan</span>
         </button>
       </div>
 
@@ -302,7 +302,7 @@
         <div class="stat-card"><div class="s-val" id="statAmount">₹0</div><div class="s-lbl">Total Amount</div></div>
       </div>
 
-      <div class="section-title"><span class="gj">તાજેતરના કાપણ</span><div class="line"></div></div>
+      <div class="section-title"><span class="gj">Letest Kapan</span><div class="line"></div></div>
       <div class="recent-list" id="recentList"></div>
     </div>
 
@@ -311,33 +311,33 @@
       <div class="page-head">
         <div>
           <div class="page-eyebrow">New Entry</div>
-          <h1 class="page-title gj">નવું કાપણ ઉમેરો</h1>
-          <div class="page-desc">કાપણ ની વિગત ભરો — Total Amount આપોઆપ ગણાશે</div>
+          <h1 class="page-title gj">Add New Kapan</h1>
+          <div class="page-desc">Kaban Details — Total Amount આપોઆપ ગણાશે</div>
         </div>
       </div>
 
       <div class="form-card">
         <div class="field">
-          <label>Kapan No (કાપણ નંબર)</label>
+          <label>Kapan No (Kapan Name/Number)</label>
           <input type="text" id="inKapanNo" placeholder="દા.ત. K-101">
         </div>
         <div class="field">
-          <label>Date (તારીખ)</label>
+          <label>Date (Date)</label>
           <input type="date" id="inDate">
         </div>
         <div class="row2">
           <div class="field">
-            <label>Pcs (નંગ)</label>
+            <label>Pcs (Pcs)</label>
             <input type="number" id="inPcs" min="0" placeholder="0">
           </div>
           <div class="field">
-            <label>Weight (વજન - Ct)</label>
+            <label>Weight (Weight - Ct)</label>
             <input type="number" id="inWeight" step="0.001" min="0" placeholder="0.000">
           </div>
         </div>
         <div class="row2">
           <div class="field">
-            <label>Rate (ભાવ / Ct)</label>
+            <label>Rate (Rate / Ct)</label>
             <input type="number" id="inRate" step="0.01" min="0" placeholder="0.00">
           </div>
           <div class="field">
@@ -346,7 +346,7 @@
           </div>
         </div>
         <button class="btn btn-gold btn-block" onclick="window.__kapanAdd()">
-          <span class="gj">કાપણ સેવ કરો</span>
+          <span class="gj">Save Kapan</span>
         </button>
       </div>
     </div>
@@ -356,12 +356,12 @@
       <div class="page-head">
         <div>
           <div class="page-eyebrow">Browse</div>
-          <h1 class="page-title gj">બધા કાપણ</h1>
+          <h1 class="page-title gj">All Kapan</h1>
           <div class="page-desc">કોઈપણ કાપણ પર click કરી તેના cut manage કરો</div>
         </div>
         <button class="btn btn-gold" onclick="window.__nav('newKapan')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          <span class="gj">નવું ઉમેરો</span>
+          <span class="gj">Add New</span>
         </button>
       </div>
       <div class="search-bar">
