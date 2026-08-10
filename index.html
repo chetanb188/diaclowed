@@ -357,7 +357,7 @@
         <div>
           <div class="page-eyebrow">Browse</div>
           <h1 class="page-title gj">All Kapan</h1>
-          <div class="page-desc">કોઈપણ કાપણ પર click કરી તેના cut manage કરો</div>
+          <div class="page-desc">Click any Kapan to Show Cut</div>
         </div>
         <button class="btn btn-gold" onclick="window.__nav('newKapan')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
@@ -365,7 +365,7 @@
         </button>
       </div>
       <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Kapan No થી શોધો..." oninput="window.__renderList()">
+        <input type="text" id="searchInput" placeholder="Find to Kapan No" oninput="window.__renderList()">
       </div>
       <div class="kapan-grid" id="kapanGrid"></div>
     </div>
@@ -374,7 +374,7 @@
     <div class="page" id="page-detail">
       <div class="back-link" onclick="window.__nav('list')">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-        <span class="gj">બધા કાપણ પર પાછા જાવ</span>
+        <span class="gj">Back to All Kapan</span>
       </div>
       <div id="detailContent"></div>
     </div>
@@ -535,8 +535,8 @@
     const weight = parseFloat($('inWeight').value) || 0;
     const rate = parseFloat($('inRate').value) || 0;
 
-    if(!kapanNo){ alert('કૃપા કરી કાપણ નંબર દાખલ કરો'); return; }
-    if(weight <= 0){ alert('કૃપા કરી માન્ય વજન દાખલ કરો'); return; }
+    if(!kapanNo){ alert('Kapan Name/Number'); return; }
+    if(weight <= 0){ alert('Weight'); return; }
 
     const k = { id: uid(), kapanNo, date: date || new Date().toISOString().slice(0,10),
       pcs, weight, rate, amount: weight * rate, createdAt: Date.now() };
@@ -705,7 +705,7 @@
       recentEl.innerHTML = `
         <div class="empty-state">
           <svg width="42" height="42" viewBox="0 0 40 40" fill="none"><polygon points="20,3 32,14 26,36 14,36 8,14" fill="none" stroke="#9d99ac" stroke-width="1.2"/></svg>
-          <div class="e-title">હજુ કોઈ કાપણ ઉમેરેલ નથી</div>
+          <div class="e-title">===Nill===</div>
           <div class="e-sub">શરૂ કરવા માટે "નવું કાપણ" પર click કરો</div>
         </div>`;
       return;
