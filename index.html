@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -258,15 +258,15 @@
 
     <div class="nav-item active" data-page="dashboard" onclick="window.__nav('dashboard')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
-      <span class="gj">Dashboard</span>
+      <span>Dashboard</span>
     </div>
     <div class="nav-item" data-page="newKapan" onclick="window.__nav('newKapan')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-      <span class="gj">New Kapan</span>
+      <span>New Kapan</span>
     </div>
     <div class="nav-item" data-page="list" onclick="window.__nav('list')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-      <span class="gj">All Kapan</span>
+      <span>All Kapans</span>
       <span class="badge" id="navListCount">0</span>
     </div>
 
@@ -286,12 +286,12 @@
       <div class="page-head">
         <div>
           <div class="page-eyebrow">Overview</div>
-          <h1 class="page-title gj">Deshboard</h1>
-          <div class="page-desc">View of All Kapan</div>
+          <h1 class="page-title">Dashboard</h1>
+          <div class="page-desc">A quick overview of all your Kapans and polish cuts</div>
         </div>
         <button class="btn btn-gold" onclick="window.__nav('newKapan')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          <span class="gj">Add New Kapan</span>
+          <span>Add New Kapan</span>
         </button>
       </div>
 
@@ -302,7 +302,7 @@
         <div class="stat-card"><div class="s-val" id="statAmount">₹0</div><div class="s-lbl">Total Amount</div></div>
       </div>
 
-      <div class="section-title"><span class="gj">Letest Kapan</span><div class="line"></div></div>
+      <div class="section-title"><span>Recent Kapans</span><div class="line"></div></div>
       <div class="recent-list" id="recentList"></div>
     </div>
 
@@ -311,33 +311,33 @@
       <div class="page-head">
         <div>
           <div class="page-eyebrow">New Entry</div>
-          <h1 class="page-title gj">Add New Kapan</h1>
-          <div class="page-desc">Kaban Details — Total Amount આપોઆપ ગણાશે</div>
+          <h1 class="page-title">Add New Kapan</h1>
+          <div class="page-desc">Fill in the Kapan details — Total Amount is calculated automatically</div>
         </div>
       </div>
 
       <div class="form-card">
         <div class="field">
-          <label>Kapan No (Kapan Name/Number)</label>
-          <input type="text" id="inKapanNo" placeholder="દા.ત. K-101">
+          <label>Kapan No</label>
+          <input type="text" id="inKapanNo" placeholder="e.g. K-101">
         </div>
         <div class="field">
-          <label>Date (Date)</label>
+          <label>Date</label>
           <input type="date" id="inDate">
         </div>
         <div class="row2">
           <div class="field">
-            <label>Pcs (Pcs)</label>
+            <label>Pcs</label>
             <input type="number" id="inPcs" min="0" placeholder="0">
           </div>
           <div class="field">
-            <label>Weight (Weight - Ct)</label>
+            <label>Weight (ct)</label>
             <input type="number" id="inWeight" step="0.001" min="0" placeholder="0.000">
           </div>
         </div>
         <div class="row2">
           <div class="field">
-            <label>Rate (Rate / Ct)</label>
+            <label>Rate (per ct)</label>
             <input type="number" id="inRate" step="0.01" min="0" placeholder="0.00">
           </div>
           <div class="field">
@@ -346,7 +346,7 @@
           </div>
         </div>
         <button class="btn btn-gold btn-block" onclick="window.__kapanAdd()">
-          <span class="gj">Save Kapan</span>
+          <span>Save Kapan</span>
         </button>
       </div>
     </div>
@@ -356,16 +356,16 @@
       <div class="page-head">
         <div>
           <div class="page-eyebrow">Browse</div>
-          <h1 class="page-title gj">All Kapan</h1>
-          <div class="page-desc">Click any Kapan to Show Cut</div>
+          <h1 class="page-title">All Kapans</h1>
+          <div class="page-desc">Click on any Kapan to manage its cuts</div>
         </div>
         <button class="btn btn-gold" onclick="window.__nav('newKapan')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          <span class="gj">Add New</span>
+          <span>Add New</span>
         </button>
       </div>
       <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Find to Kapan No" oninput="window.__renderList()">
+        <input type="text" id="searchInput" placeholder="Search by Kapan No..." oninput="window.__renderList()">
       </div>
       <div class="kapan-grid" id="kapanGrid"></div>
     </div>
@@ -374,7 +374,7 @@
     <div class="page" id="page-detail">
       <div class="back-link" onclick="window.__nav('list')">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-        <span class="gj">Back to All Kapan</span>
+        <span>Back to All Kapans</span>
       </div>
       <div id="detailContent"></div>
     </div>
@@ -535,8 +535,8 @@
     const weight = parseFloat($('inWeight').value) || 0;
     const rate = parseFloat($('inRate').value) || 0;
 
-    if(!kapanNo){ alert('Kapan Name/Number'); return; }
-    if(weight <= 0){ alert('Weight'); return; }
+    if(!kapanNo){ alert('Please enter a Kapan number'); return; }
+    if(weight <= 0){ alert('Please enter a valid weight'); return; }
 
     const k = { id: uid(), kapanNo, date: date || new Date().toISOString().slice(0,10),
       pcs, weight, rate, amount: weight * rate, createdAt: Date.now() };
@@ -557,7 +557,7 @@
   // ===== DELETE =====
   window.__deleteKapan = async function(id, ev){
     if(ev) ev.stopPropagation();
-    if(!confirm('આ કાપણ અને તેના તમામ cut ડિલીટ કરવા છે?')) return;
+    if(!confirm('Delete this Kapan and all its cuts?')) return;
     state.kapans = state.kapans.filter(k => k.id !== id);
     delete state.cuts[id];
     await saveData();
@@ -597,7 +597,7 @@
     const remaining = kapan.weight - usedSoFar;
     const warnEl = $('cutWarn'); const btn = $('addCutBtn');
     if(w > remaining + 1e-9){
-      if(warnEl){ warnEl.textContent = `⚠ મૂળ કાપણ ના વજન કરતાં વધારે થાય છે. બાકી ઉપલબ્ધ: ${fmt(remaining)} Ct`; warnEl.style.display='block'; }
+      if(warnEl){ warnEl.textContent = `⚠ Exceeds the original Kapan weight. Available remaining: ${fmt(remaining)} ct`; warnEl.style.display='block'; }
       if(btn) btn.disabled = true;
     } else {
       if(warnEl) warnEl.style.display='none';
@@ -614,7 +614,7 @@
     if($('cutPolishAmt')) $('cutPolishAmt').textContent = '0.00';
     const btn = $('addCutBtn'); if(btn){ btn.textContent = '+ Add'; btn.classList.remove('btn-editing'); }
     const cancelBtn = $('cancelCutBtn'); if(cancelBtn) cancelBtn.style.display = 'none';
-    const titleEl = document.querySelector('.cut-form-title'); if(titleEl) titleEl.innerHTML = 'Cut ઉમેરો (Polish Division)';
+    const titleEl = document.querySelector('.cut-form-title'); if(titleEl) titleEl.innerHTML = 'Add Cut (Polish Division)';
     validateCutForm();
   }
 
@@ -636,7 +636,7 @@
 
     const btn = $('addCutBtn'); if(btn){ btn.textContent = 'Update'; btn.classList.add('btn-editing'); }
     const cancelBtn = $('cancelCutBtn'); if(cancelBtn) cancelBtn.style.display = 'inline-flex';
-    const titleEl = document.querySelector('.cut-form-title'); if(titleEl) titleEl.innerHTML = `<span class="gj">Cut Edit કરો</span> — ${escapeHtml(c.name)}`;
+    const titleEl = document.querySelector('.cut-form-title'); if(titleEl) titleEl.innerHTML = `<span>Edit Cut</span> — ${escapeHtml(c.name)}`;
 
     validateCutForm();
     document.querySelector('.cut-form')?.scrollIntoView({behavior:'smooth', block:'center'});
@@ -652,14 +652,14 @@
     const weight = parseFloat($('cutWeight').value) || 0;
     const rate = parseFloat($('cutRate').value) || 0;
 
-    if(weight <= 0){ alert('કૃપા કરી માન્ય વજન દાખલ કરો'); return; }
+    if(weight <= 0){ alert('Please enter a valid weight'); return; }
 
     let usedSoFar = cutsWeightSum(kapan.id);
     if(editingCutId){
       const existing = (state.cuts[kapan.id]||[]).find(c => c.id === editingCutId);
       if(existing) usedSoFar -= existing.weight;
     }
-    if(weight > (kapan.weight - usedSoFar) + 1e-9){ alert('કટ નું વજન બાકી રહેલા વજન કરતાં વધારે ન હોવું જોઈએ.'); return; }
+    if(weight > (kapan.weight - usedSoFar) + 1e-9){ alert('Cut weight should not exceed the remaining weight.'); return; }
 
     const colour = $('cutColour').value;
     const purity = $('cutPurity').value;
@@ -705,8 +705,8 @@
       recentEl.innerHTML = `
         <div class="empty-state">
           <svg width="42" height="42" viewBox="0 0 40 40" fill="none"><polygon points="20,3 32,14 26,36 14,36 8,14" fill="none" stroke="#9d99ac" stroke-width="1.2"/></svg>
-          <div class="e-title">===Nill===</div>
-          <div class="e-sub">શરૂ કરવા માટે "નવું કાપણ" પર click કરો</div>
+          <div class="e-title">No Kapans added yet</div>
+          <div class="e-sub">Click "New Kapan" to get started</div>
         </div>`;
       return;
     }
@@ -734,8 +734,8 @@
       gridEl.innerHTML = `
         <div class="empty-state" style="grid-column:1/-1;">
           <svg width="42" height="42" viewBox="0 0 40 40" fill="none"><polygon points="20,3 32,14 26,36 14,36 8,14" fill="none" stroke="#9d99ac" stroke-width="1.2"/></svg>
-          <div class="e-title">${state.kapans.length===0 ? 'હજુ કોઈ કાપણ ઉમેરેલ નથી' : 'કંઈ મળ્યું નહીં'}</div>
-          <div class="e-sub">${state.kapans.length===0 ? 'શરૂ કરવા માટે નવું કાપણ ઉમેરો' : 'બીજું નામ શોધી જુઓ'}</div>
+          <div class="e-title">${state.kapans.length===0 ? 'No Kapans added yet' : 'No results found'}</div>
+          <div class="e-sub">${state.kapans.length===0 ? 'Add a new Kapan to get started' : 'Try a different search'}</div>
         </div>`;
       return;
     }
@@ -749,7 +749,7 @@
           <div class="kc-top"><span class="kc-name">${escapeHtml(k.kapanNo)}</span><span class="kc-date">${k.date}</span></div>
           <div class="kc-meta"><span><b>${k.pcs}</b> pcs</span><span><b>${fmt(k.weight)}</b> ct</span><span><b>₹${fmt2(k.amount)}</b></span></div>
           <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
-          <div class="kc-foot"><span>${pct.toFixed(0)}% cut થયું</span><span class="kc-cuts-count">${cutCount} cuts</span></div>
+          <div class="kc-foot"><span>${pct.toFixed(0)}% cut done</span><span class="kc-cuts-count">${cutCount} cuts</span></div>
         </div>`;
     }).join('');
   };
@@ -759,7 +759,7 @@
     const kapan = state.kapans.find(k => k.id === selectedId);
     const contentEl = $('detailContent');
     if(!kapan){
-      contentEl.innerHTML = `<div class="empty-state"><div class="e-title">કાપણ મળ્યું નહીં</div></div>`;
+      contentEl.innerHTML = `<div class="empty-state"><div class="e-title">Kapan not found</div></div>`;
       return;
     }
     const cuts = state.cuts[kapan.id] || [];
@@ -809,19 +809,19 @@
             <div class="info-chip"><div class="v">₹${fmt2(kapan.amount)}</div><div class="k">Total Amount</div></div>
           </div>
         </div>
-        <button class="btn btn-danger" onclick="window.__deleteKapan('${kapan.id}')"><span class="gj">કાપણ ડિલીટ કરો</span></button>
+        <button class="btn btn-danger" onclick="window.__deleteKapan('${kapan.id}')"><span>Delete Kapan</span></button>
       </div>
 
       <div class="remain-bar">
         <div class="rb-top">
-          <span class="gj">Cut માં વપરાયેલ: ${fmt(used)} ct / ${fmt(kapan.weight)} ct</span>
-          <span style="color:${over ? 'var(--danger)' : 'var(--gold-soft)'}" class="gj">${over ? 'વધારે થયું!' : 'બાકી: ' + fmt(remaining) + ' ct'}</span>
+          <span>Used in Cuts: ${fmt(used)} ct / ${fmt(kapan.weight)} ct</span>
+          <span style="color:${over ? 'var(--danger)' : 'var(--gold-soft)'}" ">${over ? 'Over limit!' : 'Remaining: ' + fmt(remaining) + ' ct'}</span>
         </div>
         <div class="remain-track"><div class="remain-fill ${over?'over':''}" style="width:${pct}%"></div></div>
       </div>
 
       <div class="cut-form">
-        <div class="cut-form-title">Cut ઉમેરો (Polish Division)</div>
+        <div class="cut-form-title">Add Cut (Polish Division)</div>
         <div class="cut-row">
           <div class="field"><label>Cut Name</label><input type="text" id="cutName" placeholder="Cut-${cuts.length+1}"></div>
           <div class="field"><label>Pcs</label><input type="number" id="cutPcs" min="0" placeholder="0" oninput="window.__cutRecalc()"></div>
@@ -834,7 +834,7 @@
           </div>
         </div>
 
-        <div class="cut-subhead gj">પોલિશ પછીની વિગત (Polish Details)</div>
+        <div class="cut-subhead">Post-Polish Details</div>
         <div class="cut-row2">
           <div class="field"><label>Colour</label>
             <select id="cutColour">
@@ -867,7 +867,7 @@
         </tr></thead>
         <tbody>${cutsRows}${cutsTotalRow}</tbody>
       </table>
-      </div>` : `<div class="empty-state"><div class="e-title gj">હજુ કોઈ cut ઉમેરેલ નથી</div></div>`}
+      </div>` : `<div class="empty-state"><div class="e-title">No cuts added yet</div></div>`}
     `;
   }
 
@@ -894,3 +894,4 @@
 </script>
 </body>
 </html>
+
