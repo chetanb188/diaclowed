@@ -705,7 +705,7 @@
     const totalCuts = Object.values(state.cuts).reduce((s,arr)=>s+arr.length,0);
     $('statCuts').textContent = totalCuts;
     const totalAmt = state.kapans.reduce((s,k)=>s+k.amount,0);
-    $('statAmount').textContent = '₹' + fmt2(totalAmt);
+    $('statAmount').textContent = '$' + fmt2(totalAmt);
     $('navListCount').textContent = state.kapans.length;
 
     const recentEl = $('recentList');
@@ -780,13 +780,13 @@
     const cutsRows = cuts.map(c => `
       <tr>
         <td>${escapeHtml(c.name)}</td><td>${c.pcs}</td><td>${fmt(c.weight)}</td>
-        <td>₹${fmt2(c.rate)}</td><td>₹${fmt2(c.amount)}</td>
+        <td>₹${fmt2(c.rate)}</td><td>$${fmt2(c.amount)}</td>
         <td>${c.colour ? escapeHtml(c.colour) : '—'}</td>
         <td>${c.purity ? escapeHtml(c.purity) : '—'}</td>
         <td>${c.polishPcs || 0}</td>
         <td>${fmt(c.polishWeight || 0)}</td>
         <td>₹${fmt2(c.polishRate || 0)}</td>
-        <td>${c.polishAmount ? '₹'+fmt2(c.polishAmount) : '₹0.00'}</td>
+        <td>${c.polishAmount ? '$'+fmt2(c.polishAmount) : '₹0.00'}</td>
         <td>
           <button class="del-x edit-x" onclick="window.__editCut('${kapan.id}','${c.id}')" title="Edit">✎</button>
           <button class="del-x" onclick="window.__deleteCut('${kapan.id}','${c.id}')" title="Delete">✕</button>
